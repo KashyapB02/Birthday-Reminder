@@ -1,38 +1,341 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
 .App {
-  text-align: center;
+
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+
+    background-color: rgba(242, 138, 178, 1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainContainer {
+
+    width: 75%;
+    padding: 20px 20px;
+    margin: 5rem 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.birthdayForm {
+
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-right: 2%;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.formHeading {
+
+    width: 100%;
+    background-color: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.getImage {
+
+    margin: 30px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clickUpload {
+
+    background-color: white;
+    border: none;
+}
+
+#getAvatar {
+
+    height: 100px;
+    width: 100px;
+
+    border-radius: 0;
+}
+
+#uploadFile {
+
+    display: none;
+}
+
+.getInfo {
+
+    width: 100%;
+    padding: 0.4rem 0;
+    background-color: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+
+    color: rgb(52, 58, 64);
+}
+
+.labels {
+
+    width: 75%;
+    padding: 0.5rem 1rem 0.5rem 0;
+    background-color: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.getInput {
+
+    width: 100%;
+    height: 0.8rem;
+    padding: 12px;
+
+    border: 1px solid rgba(52, 58, 64, 0.3);
+
+    border-radius: 3px;
+}
+
+.getInput:focus {
+
+    border: none;
+    outline: 0.5px solid rgba(242, 138, 178, 1);;
+    box-shadow: 0 0 4px 1px rgba(242, 138, 178, 1);;
+}
+
+.container {
+
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-left: 2%;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+    border-radius: 5px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.listHeading {
+
+    width: 100%;
+    padding: 10px;
+    background-color: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.heading-content {
+    
+    padding: 10px 0;
+
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+.displayBirthday {
+
+    width: 100%;
+}
+
+#displayBirthday {
+
+    display: none;
+}
+
+.Button {
+
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.clickButton {
+
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(242, 138, 178, 1);
+    cursor: pointer;
+
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.clickButton:hover {
+
+    transform:scale(1.025);
+    transition:all 0.2s;
+}
+
+.empty {
+
+    margin: 20px 0;
+}
+
+@media (max-width:950px) {
+
+    .mainContainer {
+
+        width: 400px;
+        flex-wrap: wrap;
+    }
+
+    .birthdayForm {
+
+        margin-right: 0;
+    }
+
+    .container {
+
+        margin-left: 0;
+        margin: 10vmin auto;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .listHeading {
+
+        align-content: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .getInfo {
+
+        padding: 0.6rem 0.8rem;
+        flex-direction: column;
+    }
+
+    .labels {
+
+        width: 100%;
+        padding: 5px 0;
+        justify-content: flex-start;
+    }
+
+    .getInput {
+
+        width: 91%;
+    }
+
+    .heading-content {
+    
+        text-align: center;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .mainContainer {
+
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .birthdayForm {
+
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .container {
+
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+
+        box-shadow: none;
+    }
+
+    .Button {
+
+        text-align: center;
+        align-content: center;
+    }
+
+    .clickButton {
+
+        width: 100%;
+        margin: auto;
+        font-size: 1.2em;
+        text-align: center;
+        align-content: center;
+    }
+}
+
+@media (max-width:250px) {
+
+    .App {
+
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 150px) {
+
+    .heading-content {
+    
+        font-size: 20vmin;
+        font-weight: bolder;
+    }
+
+    .clickButton {
+    
+        font-size: 15vmin;
+        font-weight: bolder;
+    }
 }
